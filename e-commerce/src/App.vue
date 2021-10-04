@@ -1,24 +1,34 @@
 <template>
-  <div id="nav">
-  <span>  <img id= "io" src = "https://assets.entrepreneur.com/content/3x2/2000/20180511063849-flipkart-logo-detail-icon.jpeg">
-   <h1 id="ii">FLIPKART</h1></span>
-    <span id="r">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    </span>
-   
-    <hr>
-    <Slider />
-  </div>
+ <div id="nav">
+
+<ul>
+  <li><img src="https://th.bing.com/th/id/OIP.XiJaMWJmd7llMMmf-3vOYAHaHa?pid=ImgDet&rs=1"  style="width:100px; height:80px;"></li>
+  <router-link to="/home"> <li><a>Home</a></li></router-link>
+   <router-link to="/men"> <li><a>Mens</a></li></router-link>
+    <router-link to="/women"> <li><a>women</a></li></router-link>
+     <router-link to="/jewelry"> <li><a>jewelry</a></li></router-link>
+      <router-link to="/electronics"> <li><a>electronic</a></li></router-link>
+<h1 id="h11"><li>FLIPKART</li></h1>
+ <router-link to="/contact"> <li class="cc"><a>Contact</a></li></router-link>
+ <router-link to="/about"> <li class="cc"><a>About</a></li></router-link>
+  <router-link to="/about"> <li class="cc"><a>login</a></li></router-link>
+</ul>
+
+ 
+
+ 
   <router-view/>
+   <hr>
+<Foot/>
+ </div>
 </template>
 
 <script>
-import Slider from '@/components/HelloWorld.vue';
+import Foot from "@/views/end.vue";
 export default {
   name: "nav",
   components: {
-    Slider
+    Foot,
   }
 };
 </script>
@@ -26,6 +36,47 @@ export default {
 
 
 <style>
+
+#h11{
+  color:yellow;
+  margin-left: 25%;
+  padding-left: 20%;
+}
+button{
+  color:red;
+  margin-left: 1100%;
+  padding-left: 10%;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:skyblue;
+}
+
+li {
+  float: left;
+  margin-top: 1%;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color:skyblue;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 #ii{
  text-align: center;
 }
@@ -50,4 +101,11 @@ body {
   text-align-last: right;
   padding-bottom: 0%;
 }
+.cc{
+  margin-left:3%;
+  margin-right: 0%;
+  margin-top: 0%;
+
+}
+
 </style>
